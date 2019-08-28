@@ -1,8 +1,17 @@
-var properties = require("properties");
+import { resolve } from "path";
+import { rejects } from "assert";
+const properties = require("properties");
 
-properties.parse ("config.properties", { path: true }, function (error: any, obj: any){
-    if (error) return console.error (error);
-    
-    console.log (obj);
-    //{ a: 1, b: 2 }
+export function readPropertiesFile(filePath: string): Promise<any> {
+  const promise = new Promise(function (resolve, reject) {
+    properties.parse(filePath, { path: true }, function (error: any, obj: any) {
+      if (error) {
+        reject(error);
+      }
+      else {
+        resolve(obj);
+      }
+    });
   });
+  return promise;
+}
