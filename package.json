@@ -1,0 +1,31 @@
+{
+  "name": "basicnodepackage",
+  "version": "1.0.0",
+  "description": "Basic node package to try different options",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nightendkumar/basicnodepackage.git"
+  },
+  "keywords": [
+    "Sample",
+    "NPM"
+  ],
+  "author": "nightendkumar <nightendkumar@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nightendkumar/basicnodepackage/issues"
+  },
+  "homepage": "https://github.com/nightendkumar/basicnodepackage#readme",
+  "dependencies": {
+    "@types/node": "^12.7.2",
+    "properties": "^1.2.1",
+    "typescript": "^3.5.3"
+  }
+}
